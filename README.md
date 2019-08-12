@@ -15,7 +15,8 @@ GET http://localhost:3000/bodyparts
 * request:
 GET http://localhost:3000/bodyparts
 * response:
-`[
+```json
+[
   {
     "ID": 16,
     "Name": "Abdomen, pelvis & buttocks"
@@ -40,7 +41,8 @@ GET http://localhost:3000/bodyparts
     "ID": 17,
     "Name": "Skin, joints & general"
   }
-]`
+]
+```
 
 ## getSymptoms API
 description:
@@ -52,7 +54,8 @@ example:
 * request:
 http://localhost:3000/symptoms/16/3
 * response:
-`[
+```json
+[
   {
     "ID": 10,
     "Name": "Abdominal pain",
@@ -178,7 +181,8 @@ http://localhost:3000/symptoms/16/3
       
     ]
   }
-]`
+]
+```
 
 ## getDiagnosis API
 description:
@@ -191,7 +195,8 @@ example:
 * request:
 GET http://localhost:3000/diagnosis?symptoms=[10,44,45]&gender=male&yob=1993
 * response:
-`[
+```json
+[
   {
     "Issue": {
       "ID": 281,
@@ -261,7 +266,8 @@ GET http://localhost:3000/diagnosis?symptoms=[10,44,45]&gender=male&yob=1993
       }
     ]
   }
-]`
+]
+```
 
 ## getSpecialization API
 description:
@@ -274,7 +280,8 @@ example:
 * request:
 GET http://localhost:3000/specialization?symptoms=[10,44,45]&gender=male&yob=1993
 * response:
-`[
+```
+[
   {
     "ID": 15,
     "Name": "General practice",
@@ -293,5 +300,6 @@ GET http://localhost:3000/specialization?symptoms=[10,44,45]&gender=male&yob=199
     "Accuracy": 19.1489353,
     "Ranking": 0
   }
-]`
+]
+```
 
