@@ -1,4 +1,4 @@
-# How to run the code:
+# How to run the backend:
 `npm install; node index.js;`
 
 # API documentation
@@ -9,9 +9,9 @@
 GET http://localhost:3000/bodyparts
 
 #### example:
-request:
+* request:
 GET http://localhost:3000/bodyparts
-response:
+* response:
 `[{"ID":16,"Name":"Abdomen, pelvis & buttocks"},{"ID":7,"Name":"Arms & shoulder"},{"ID":15,"Name":"Chest & back"},{"ID":6,"Name":"Head, throat & neck"},{"ID":10,"Name":"Legs"},{"ID":17,"Name":"Skin, joints & general"}]`
 
 ## getSymptoms API
