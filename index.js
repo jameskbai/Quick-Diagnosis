@@ -3,6 +3,10 @@ var app = express();
 var http = require('http').Server(app);
 var api_medic = require('./api/api_medic');
 
+process.on('uncaughtException', function (err) {
+  console.log(err);
+})
+
 // to render static html files
 app.use(express.static(__dirname + '/views'));
 
