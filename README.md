@@ -18,13 +18,13 @@ GET http://localhost:3000/bodyparts
 
 description:
 GET http://localhost:3000/symptoms/:bodyPart/:genderEnum
-:bodyPart is a corresponding ID of the bodyPart returned fromt he getBodyParts API.
-:genderEnum is a number between 0-3 where 0=male, 1=female, 2=body, 3=girl
+* :bodyPart is a corresponding ID of the bodyPart returned fromt he getBodyParts API.
+* :genderEnum is a number between 0-3 where 0=male, 1=female, 2=body, 3=girl
 
 example:
-request:
+*request:
 http://localhost:3000/symptoms/16/3
-response:
+*response:
 `[{"ID":10,"Name":"Abdominal pain","HasRedFlag":false,"HealthSymptomLocationIDs":[16,36],"ProfName":"","Synonyms":[" Stomach ache"]},{"ID":44,"Name":"Nausea","HasRedFlag":false,"HealthSymptomLocationIDs":[6,22,15,31,16,36,17,47],"ProfName":"","Synonyms":[]},{"ID":45,"Name":"Heartburn","HasRedFlag":false,"HealthSymptomLocationIDs":[6,24,15,31,16,36],"ProfName":"","Synonyms":["Pyrosis"]},{"ID":92,"Name":"Early satiety","HasRedFlag":false,"HealthSymptomLocationIDs":[16,36],"ProfName":"","Synonyms":[]},{"ID":101,"Name":"Vomiting","HasRedFlag":false,"HealthSymptomLocationIDs":[6,25,16,36],"ProfName":"","Synonyms":[]},{"ID":153,"Name":"Fast, deepened breathing","HasRedFlag":false,"HealthSymptomLocationIDs":[6,24,25,15,31,16,36],"ProfName":"","Synonyms":["Fast breathing","Hyperventilation"]},{"ID":179,"Name":"Stomach burning","HasRedFlag":false,"HealthSymptomLocationIDs":[16,36],"ProfName":"","Synonyms":["Burning abdominal pain","Burning stomach ache"]},{"ID":181,"Name":"Vomiting blood","HasRedFlag":true,"HealthSymptomLocationIDs":[6,25,16,36],"ProfName":"","Synonyms":[]}]`
 
 ## getDiagnosis API
@@ -45,13 +45,13 @@ response:
 
 description:
 GET http://localhost:3000/specialization?symptoms=:symptoms&gender=:gender&yob=:yob
-:symptoms is an array of symptom IDs that map to the ones from getSymptoms API.
-:gender is a string that can either be 'male' or 'female'
-:yob is a year of birth that is a number.
+* :symptoms is an array of symptom IDs that map to the ones from getSymptoms API.
+* :gender is a string that can either be 'male' or 'female'
+* :yob is a year of birth that is a number.
 
 example:
-request:
+* request:
 GET http://localhost:3000/specialization?symptoms=[10,44,45]&gender=male&yob=1993
-response:
+* response:
 `[{"ID":15,"Name":"General practice","Accuracy":90,"Ranking":0},{"ID":19,"Name":"Internal medicine","Accuracy":70.85107,"Ranking":0},{"ID":14,"Name":"Gastroenterology","Accuracy":19.1489353,"Ranking":0}]`
 
