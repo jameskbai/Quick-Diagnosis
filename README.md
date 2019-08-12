@@ -1,4 +1,8 @@
 # How to run the backend:
+* Modify the `config/token.js` and add your apimedic token here like so:
+`var token = $YOUR_TOKEN_HERE;`
+
+* In the project root directory run:
 `npm install; node index.js;`
 
 # API documentation
