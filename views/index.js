@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  // global variables
+  var bodyPartIds = [];
   
   function showBodyParts(data) {
     // take data and give a multiple choice question.
@@ -20,6 +22,37 @@ $(document).ready(function() {
      } 
   }
 
+  function addItem(curr) {
+    $(curr).addClass("dropdown-content").removeClass("dropdown-content2");
+  }
+
+  function removeItem(curr) {
+    $(curr).addClass("dropdown-content2").removeClass("dropdown-content");
+  }
+
+
+  function refreshListeners() {
+    $(".dropdown-content2").click(function(event){
+      event.preventDefault(event);
+      for( var i = 0; i < bodyPartIds.length; i++){ 
+        if ( arr[i] === this.id) {
+        arr.splice(i, 1); 
+        }
+      }
+       console.log(bodyPartIds);
+    });
+
+    $(".dropdown-content").click(function(event){
+      event.preventDefault(event);
+      removeItem(this);
+      addItem(this);
+      bodyPartIds.push(this.id);
+       console.log(bodyPartIds);
+      
+    });   
+    
+  }
+
     $(".dropbtn").click(function(){
       console.log("id here: " + this.id);
       var url2 = '/detailedBodypart/' + this.id;
@@ -28,18 +61,13 @@ $(document).ready(function() {
       .done(function(data) {
         console.log(data);
         showDetailedBodyParts(data, curr);
+        refreshListeners();
       })
       .fail(function() {
         console.log('it failed');
       })
     })
 
-    var bodyPartIds;
-    $(".dropdown-content").click(function(){
-      console.log("hello");
-      bodyPartIds.push(this.id);
-      console.log(bodyPartIds);
-    })
 
 
   }
