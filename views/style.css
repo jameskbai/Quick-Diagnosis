@@ -1,0 +1,30 @@
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropbtn:hover {
+	background-color: #3e8e41
+}
+
+.dropdown-content {
+	background-color: white;
+	
+
+}
+
+.dropdown-content:hover {
+	background-color: grey;
+}
+
+.dropdown-content2 {
+	background-color: grey;
+
+}
+
+.dropdown-content2:hover {
+	background-color: white;
+}
